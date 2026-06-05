@@ -19,7 +19,6 @@ const ProjectDesktopSlide = ({
   projectDescription,
   projectHighlights,
   projectImg,
-  projectStatus,
   projectTechnologies,
   projectTitle,
   projectVisualType,

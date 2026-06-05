@@ -20,7 +20,7 @@ const Likes = (): JSX.Element => {
 
   useEffect(() => {
     getAllLikes();
-  }, [isLikePersisted]);
+  }, [isLikePersisted, getAllLikes]);
 
   const handlePostLike = useCallback(() => {
     postLike();

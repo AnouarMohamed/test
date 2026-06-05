@@ -73,10 +73,10 @@ const WidgetsModalContent = (): JSX.Element => {
             <NewsWidget
               key={`${article.title}${article.publishedAt}`}
               className={`grid-card-${id + 1}`}
-              newsHeader={article.title!}
+              newsHeader={article.title ?? ''}
               newsSource={article.source.name}
-              newsLink={article.url!}
-              backgroundImg={article.urlToImage!}
+              newsLink={article.url ?? ''}
+              backgroundImg={article.urlToImage ?? ''}
               cardGradientColor={'rgba(3, 21, 41, 1)'}
             />
           ))}
