@@ -17,7 +17,7 @@ const SystemTray = (): JSX.Element => {
   const [rightCoordinate, setRightCoordinate] = useState(0);
   const { systemTrayButtons } = useSystemTrayConfig();
   const RIGHT_OFFSET = 400;
-  const BOTTOM_OFFSET = -50;
+  const TASKBAR_HEIGHT = '3rem';
 
   useEffect(() => {
     if (containerRef.current) {
@@ -49,7 +49,7 @@ const SystemTray = (): JSX.Element => {
         variant={'systemTrayModal'}
         width={'600px'}
         position={{
-          bottom: `${BOTTOM_OFFSET}px`,
+          bottom: TASKBAR_HEIGHT,
           right: `${rightCoordinate - RIGHT_OFFSET}px`,
         }}
       >
@@ -59,7 +59,7 @@ const SystemTray = (): JSX.Element => {
         variant={'searchModal'}
         width={'600px'}
         position={{
-          bottom: `${BOTTOM_OFFSET}px`,
+          bottom: TASKBAR_HEIGHT,
           right: `${rightCoordinate - RIGHT_OFFSET}px`,
         }}
       >

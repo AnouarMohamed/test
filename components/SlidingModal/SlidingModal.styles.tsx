@@ -25,13 +25,13 @@ const widgetModalStyles = css<ContainerProps>`
 
 const systemTrayModalStyles = css<ContainerProps>`
   background-color: ${({ theme }) => theme.colors.systemTray.bg};
-  transform: ${({ isAppCenterOpen, width }) =>
-    isAppCenterOpen ? `translateY(-7rem)` : `translateY(${width})`};
+  transform: ${({ isAppCenterOpen }) =>
+    isAppCenterOpen ? 'translateY(0)' : 'translateY(calc(100% + 4rem))'};
 `;
 const searchModalStyles = css<ContainerProps>`
   background-color: ${({ theme }) => theme.colors.systemTray.bg};
-  transform: ${({ isSearchOpen, width }) =>
-    isSearchOpen ? `translateY(-7rem)` : `translateY(${width})`};
+  transform: ${({ isSearchOpen }) =>
+    isSearchOpen ? 'translateY(0)' : 'translateY(calc(100% + 4rem))'};
 `;
 
 const settingsModalStyles = css<ContainerProps>`
