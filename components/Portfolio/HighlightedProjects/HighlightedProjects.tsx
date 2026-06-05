@@ -1,29 +1,48 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import * as Styled from './HighlightedProjects.styles';
 import { useHighlightedProjectsData } from './HighlightedProjects.config';
 import Navbar from '../Navbar/Navbar';
 import SectionHeader from '../Typography/SectionHeader/SectionHeader';
 import PortfolioParagraph from '../Typography/PortfolioParagraph/PortfolioParagraph';
 import Image from 'next/image';
+import {
+  SiAmazonaws,
+  SiDocker,
+  SiGithubactions,
+  SiGo,
+  SiGrafana,
+  SiKubernetes,
+  SiLinux,
+  SiPostgresql,
+  SiPrometheus,
+  SiPython,
+  SiReact,
+  SiRedis,
+  SiTypescript,
+} from 'react-icons/si';
 import ScrollHint from '../ScrollHint/ScrollHint';
 import ProjectDesktopSlide from '../ProjectDesktopSlide/ProjectDesktopSlide';
 import ProjectDetailsSlide from '../ProjectDetailsSlide/ProjectDetailsSlide';
 import WaveDivider from '../WaveDivider/WaveDivider';
 
-const toolIcons = [
-  { name: 'Kubernetes', src: '/assets/portfolio/skills/developer.png' },
-  { name: 'Docker', src: '/assets/portfolio/projects/icons/docker.svg' },
-  { name: 'AWS', src: '/assets/portfolio/skills/aws.svg' },
-  { name: 'Linux', src: '/assets/portfolio/skills/linux-original.svg' },
-  { name: 'GitHub Actions', src: '/assets/portfolio/skills/github-original.svg' },
-  { name: 'Go', src: '/assets/portfolio/projects/icons/go.svg' },
-  { name: 'Python', src: '/assets/portfolio/skills/python-original.svg' },
-  { name: 'TypeScript', src: '/assets/portfolio/skills/typescript-original.svg' },
-  { name: 'React', src: '/assets/portfolio/skills/react-original.svg' },
-  { name: 'PostgreSQL', src: '/assets/portfolio/skills/postgresql-original.svg' },
-  { name: 'Redis', src: '/assets/portfolio/skills/developer.png' },
-  { name: 'Prometheus', src: '/assets/portfolio/skills/developer.png' },
-  { name: 'Grafana', src: '/assets/portfolio/skills/developer.png' },
+const toolIcons: {
+  name: string;
+  icon?: ReactNode;
+  src?: string;
+}[] = [
+  { name: 'Kubernetes', icon: <SiKubernetes /> },
+  { name: 'Docker', icon: <SiDocker /> },
+  { name: 'AWS', icon: <SiAmazonaws /> },
+  { name: 'Linux', icon: <SiLinux /> },
+  { name: 'GitHub Actions', icon: <SiGithubactions /> },
+  { name: 'Go', icon: <SiGo /> },
+  { name: 'Python', icon: <SiPython /> },
+  { name: 'TypeScript', icon: <SiTypescript /> },
+  { name: 'React', icon: <SiReact /> },
+  { name: 'PostgreSQL', icon: <SiPostgresql /> },
+  { name: 'Redis', icon: <SiRedis /> },
+  { name: 'Prometheus', icon: <SiPrometheus /> },
+  { name: 'Grafana', icon: <SiGrafana /> },
   { name: 'Jaeger', src: '/assets/portfolio/logos/jaeger.svg' },
 ];
 
@@ -61,13 +80,19 @@ const HighlightedProjects = (): JSX.Element => {
           <Styled.ToolsGrid>
             {toolIcons.map((tool) => (
               <Styled.ToolIconWrapper key={tool.name}>
-                <Image
-                  src={tool.src}
-                  height={50}
-                  width={50}
-                  objectFit={'contain'}
-                  alt={tool.name}
-                />
+                {tool.icon ? (
+                  <Styled.ToolIconNode aria-label={tool.name}>
+                    {tool.icon}
+                  </Styled.ToolIconNode>
+                ) : (
+                  <Image
+                    src={tool.src || ''}
+                    height={50}
+                    width={50}
+                    objectFit={'contain'}
+                    alt={tool.name}
+                  />
+                )}
                 <span>{tool.name}</span>
               </Styled.ToolIconWrapper>
             ))}

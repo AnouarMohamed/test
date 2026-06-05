@@ -54,7 +54,7 @@ export const useRecommendedConfig = (): {
       id: 5,
       fileName: 'KubeLens AI',
       details: 'Kubernetes diagnostics project',
-      icon: '/assets/portfolio/skills/developer.png',
+      icon: '/assets/portfolio/projects/icons/go.svg',
       action: () =>
         window.open('https://github.com/AnouarMohamed/KubLens-AI', '_blank'),
       iconSize: { height: 40, width: 40 },
@@ -74,7 +74,7 @@ export const useRecommendedConfig = (): {
       id: 7,
       fileName: 'Nodewright',
       details: 'Open-source contribution',
-      icon: '/assets/portfolio/skills/developer.png',
+      icon: '/assets/portfolio/skills/linux-original.svg',
       action: () =>
         window.open('https://github.com/NVIDIA/nodewright', '_blank'),
       iconSize: { height: 40, width: 40 },

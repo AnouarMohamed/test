@@ -1,11 +1,11 @@
 export const keyTechSkills: { text: string; iconUrl: string }[] = [
   {
     text: 'Kubernetes, Helm, Kustomize',
-    iconUrl: '/assets/portfolio/skills/developer.png',
+    iconUrl: '/assets/portfolio/projects/icons/docker.svg',
   },
   {
     text: 'Docker, Docker Swarm, Docker Compose',
-    iconUrl: '/assets/portfolio/skills/developer.png',
+    iconUrl: '/assets/portfolio/projects/icons/docker.svg',
   },
   {
     text: 'GitHub Actions, CodeQL, Trivy, CI/CD',
@@ -13,7 +13,7 @@ export const keyTechSkills: { text: string; iconUrl: string }[] = [
   },
   {
     text: 'Go, Python, Java, TypeScript',
-    iconUrl: '/assets/portfolio/skills/developer.png',
+    iconUrl: '/assets/portfolio/projects/icons/go.svg',
   },
   {
     text: 'React, Vite, FastAPI, Spring Boot',
@@ -36,11 +36,11 @@ export const keyTechSkills: { text: string; iconUrl: string }[] = [
 export const otherSkills: { text: string; iconUrl: string }[] = [
   {
     text: 'Incident analysis, logs, metrics, and runbooks',
-    iconUrl: '/assets/portfolio/skills/developer.png',
+    iconUrl: '/assets/portfolio/projects/icons/shell.svg',
   },
   {
     text: 'OWASP, RBAC, TLS, audit logs, hardening',
-    iconUrl: '/assets/portfolio/skills/developer.png',
+    iconUrl: '/assets/portfolio/skills/check.svg',
   },
   {
     text: 'Open-source PRs, tests, docs, and review',
@@ -161,7 +161,7 @@ export const professionalExperience: IProfessionalExperience[] = [
   {
     variant: 'withResponsibilities',
     company: 'ITO',
-    companyImg: '/assets/portfolio/skills/developer.png',
+    companyImg: '/assets/portfolio/projects/icons/docker.svg',
     role: 'DevSecOps and Infrastructure Intern',
     shortSummary:
       'Pre-hire internship focused on production infrastructure, service migration, deployment automation, CI/CD hardening, monitoring, and operational documentation.',
@@ -188,7 +188,7 @@ export const professionalExperience: IProfessionalExperience[] = [
   {
     variant: 'withResponsibilities',
     company: 'Finatech Group',
-    companyImg: '/assets/portfolio/skills/developer.png',
+    companyImg: '/assets/portfolio/skills/aws.svg',
     role: 'Deployment, Virtualization, and Monitoring Intern',
     shortSummary:
       'Infrastructure internship covering virtualized environments, monitoring dashboards, alerting, network segmentation, hardening, and operations documentation.',
@@ -215,7 +215,7 @@ export const professionalExperience: IProfessionalExperience[] = [
   {
     variant: 'simple',
     company: 'CHP Casablanca',
-    companyImg: '/assets/portfolio/skills/developer.png',
+    companyImg: '/assets/portfolio/skills/check.svg',
     role: 'Digitalization and Workflows Intern',
     shortSummary:
       'Digitized patient workflows around registrations, transfers, queues, and operational dashboards, improving traceability in a real hospital environment with strong operational constraints.',

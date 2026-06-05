@@ -91,11 +91,25 @@ export const ToolIconWrapper = styled.div`
     transform: translateY(-5px);
   }
 
-  span {
+  > span:last-child {
     color: #8b949e;
     font-size: 0.75rem;
     text-align: center;
     white-space: nowrap;
+  }
+`;
+
+export const ToolIconNode = styled.span`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  color: #58a6ff;
+
+  svg {
+    width: 100%;
+    height: 100%;
   }
 `;
 
