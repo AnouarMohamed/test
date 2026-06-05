@@ -16,7 +16,7 @@ export interface Props {
  */
 const SocialMediaContact = ({ icon, href }: Props): JSX.Element => {
   return (
-    <Styled.Container href={href} target="_blank" rel="noopener">
+    <Styled.Container href={href} target="_blank" rel="noopener noreferrer">
       <div className="hovicon effect-1 sub-b">{icon}</div>
     </Styled.Container>
   );

@@ -40,7 +40,7 @@ const About = (): JSX.Element => {
 
         <Paragraph margin={'2rem 0'}>
           This product is licensed with
-          <Styled.A href={'https://github.com/'} target="_blank" rel="noopener">
+          <Styled.A href={'https://github.com/'} target="_blank" rel="noopener noreferrer">
             Creative Commons
           </Styled.A>
         </Paragraph>

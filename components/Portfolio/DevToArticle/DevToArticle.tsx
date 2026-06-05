@@ -65,7 +65,7 @@ const DevToArticle = ({
         <Styled.Description>{description}</Styled.Description>
       </Styled.TextColumn>
 
-      <Styled.ExternalLink href={url} target="_blank" rel="noopener" />
+      <Styled.ExternalLink href={url} target="_blank" rel="noopener noreferrer" />
 
       <Styled.Footer>
         <Styled.Stat>

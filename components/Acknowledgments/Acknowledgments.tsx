@@ -29,12 +29,12 @@ const Acknowledgments = (): JSX.Element => {
           <Styled.LI key={author.id}>
             <Styled.AuthorCard>
               <Styled.AuthorContacts>
-                <Styled.A href={author.url} target="_blank" rel="noopener">
+                <Styled.A href={author.url} target="_blank" rel="noopener noreferrer">
                   <WithSparkles color={'yellow'}>{author.name}</WithSparkles>
                 </Styled.A>
 
                 {author.github && (
-                  <Styled.A href={author.github} target="_blank" rel="noopener">
+                  <Styled.A href={author.github} target="_blank" rel="noopener noreferrer">
                     <FiGithub className={'github__icon'} />
                   </Styled.A>
                 )}

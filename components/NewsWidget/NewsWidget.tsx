@@ -36,7 +36,7 @@ const NewsWidget = ({
     >
       <Styled.TextWrapper>
         <Paragraph margin={'0.5rem 0'}>{newsSource}</Paragraph>
-        <Styled.NewsHeader href={newsLink} target="_blank" rel="noopener">
+        <Styled.NewsHeader href={newsLink} target="_blank" rel="noopener noreferrer">
           {newsHeader}
         </Styled.NewsHeader>
         <Styled.ActionPanel>

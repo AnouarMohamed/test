@@ -36,7 +36,7 @@ const Figma = (): JSX.Element => {
             Interface references for the systems I am building and maintaining.
           </p>
         </div>
-        <ProfileLink href={siteProfile.githubUrl} target="_blank" rel="noopener">
+        <ProfileLink href={siteProfile.githubUrl} target="_blank" rel="noreferrer">
           <FiGithub />
           GitHub
         </ProfileLink>
@@ -59,7 +59,7 @@ const Figma = (): JSX.Element => {
                 <h2>{artifact.title}</h2>
                 <p>{artifact.description}</p>
               </div>
-              <a href={artifact.href} target="_blank" rel="noopener">
+              <a href={artifact.href} target="_blank" rel="noreferrer">
                 <FiExternalLink />
               </a>
             </CardBody>

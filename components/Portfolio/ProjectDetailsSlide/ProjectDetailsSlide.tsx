@@ -3,6 +3,7 @@ import * as Styled from './ProjectDetailsSlide.styles';
 import TextCarousel from '../TextCarousel/TextCarousel';
 import { useIntersectionObserver } from '../../../hooks/useIntersectionObserver';
 import { ICarouselQuote } from '../../../types/portfolio';
+import Image from 'next/image';
 
 export interface Props {
   slideHeight: string;
@@ -83,10 +84,13 @@ const ProjectDetailsSlide = ({
             <Styled.LevitatingWrapper>
               <Styled.Figure>
                 {screenshotDeck.map((projectImage, id) => (
-                  <img
+                  <Image
                     key={`${projectImage}-${id}`}
                     src={projectImage}
                     alt={`${projectName} screenshot ${id + 1}`}
+                    height={800}
+                    width={450}
+                    objectFit={'contain'}
                   />
                 ))}
               </Styled.Figure>

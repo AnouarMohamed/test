@@ -56,7 +56,7 @@ const Resume = (): JSX.Element => {
             <Styled.ContactLink
               href={siteProfile.siteUrl}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <FiGlobe />
               {siteProfile.siteUrl.replace('https://', '')}
@@ -102,7 +102,7 @@ const Resume = (): JSX.Element => {
                 <Styled.SocialMediaLink
                   href={siteProfile.linkedinUrl}
                   target={'_blank'}
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <SiLinkedin className={'social-media-icon'} />
                   Linkedin
@@ -111,7 +111,7 @@ const Resume = (): JSX.Element => {
               <Styled.SocialMediaLink
                 href={siteProfile.githubUrl}
                 target={'_blank'}
-                rel="noopener"
+                rel="noopener noreferrer"
               >
                 <FiGithub className={'social-media-icon'} />
                 GitHub

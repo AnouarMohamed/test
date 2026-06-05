@@ -32,7 +32,7 @@ const TextList = (props: ListProps): JSX.Element => {
             <Styled.ExternalLink
               href={textBulletPoint.url}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               <FiExternalLink />
             </Styled.ExternalLink>

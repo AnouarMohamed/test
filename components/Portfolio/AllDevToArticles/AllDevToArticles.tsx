@@ -35,7 +35,7 @@ const AllDevToArticles = (): JSX.Element => {
             <InlineLink
               href={siteProfile.devToUrl}
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >
               GitHub
             </InlineLink>
