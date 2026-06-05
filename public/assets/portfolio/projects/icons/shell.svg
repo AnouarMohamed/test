@@ -1,0 +1,7 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="80" fill="#071114"/>
+  <rect x="82" y="126" width="348" height="260" rx="30" fill="#101C21" stroke="#00ADD8" stroke-width="12"/>
+  <path d="M134 206l58 54-58 54" stroke="#00ADD8" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M224 318h110" stroke="#DDEEF7" stroke-width="24" stroke-linecap="round"/>
+  <text x="161" y="445" fill="#DDEEF7" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700">Shell</text>
+</svg>
