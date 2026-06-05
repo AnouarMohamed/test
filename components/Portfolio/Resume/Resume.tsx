@@ -22,6 +22,7 @@ import PortfolioParagraph from '../Typography/PortfolioParagraph/PortfolioParagr
 import ProfessionalExperience from '../ProfessionalExperience/ProfessionalExperience';
 import Link from 'next/link';
 import { siteProfile } from '../../../config/siteProfile';
+import ActionButton from '../ActionButton/ActionButton';
 
 /**
  *Renders resume component
@@ -31,6 +32,24 @@ import { siteProfile } from '../../../config/siteProfile';
 const Resume = (): JSX.Element => {
   return (
     <Styled.Container>
+      {/* PDF VIEWER FOR DESKTOP */}
+      <Styled.PDFContainer>
+        <iframe
+          src={`${siteProfile.resumePdf}#toolbar=0&navpanes=0&scrollbar=0`}
+          title="Actual Resume PDF"
+        />
+      </Styled.PDFContainer>
+
+      {/* DOWNLOAD BUTTON FOR MOBILE */}
+      <Styled.MobilePDFLink>
+        <ActionButton
+          renderAsLink
+          href={siteProfile.resumePdf}
+          buttonText="Download Actual Resume (PDF)"
+          icon={<FiDownload className="action-icon" />}
+        />
+      </Styled.MobilePDFLink>
+
       <Styled.ResumeWrapper>
         <Styled.LeftColumn>
           <Styled.ContactInfo>

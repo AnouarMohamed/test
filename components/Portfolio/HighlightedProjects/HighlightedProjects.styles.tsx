@@ -68,6 +68,37 @@ export const HeroRightColumn = styled.div`
   }
 `;
 
+export const ToolsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 700px;
+  padding: 2rem;
+  background: rgba(22, 27, 34, 0.5);
+  border-radius: 12px;
+  border: 1px solid #30363d;
+`;
+
+export const ToolIconWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  span {
+    color: #8b949e;
+    font-size: 0.75rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+`;
+
 export const GitHubVisualShell = styled.div`
   position: relative;
   width: min(54vw, 820px);

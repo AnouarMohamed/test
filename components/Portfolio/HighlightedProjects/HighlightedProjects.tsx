@@ -9,7 +9,23 @@ import ScrollHint from '../ScrollHint/ScrollHint';
 import ProjectDesktopSlide from '../ProjectDesktopSlide/ProjectDesktopSlide';
 import ProjectDetailsSlide from '../ProjectDetailsSlide/ProjectDetailsSlide';
 import WaveDivider from '../WaveDivider/WaveDivider';
-import { FiGitBranch, FiGithub, FiStar } from 'react-icons/fi';
+
+const toolIcons = [
+  { name: 'Kubernetes', src: '/assets/portfolio/skills/developer.png' },
+  { name: 'Docker', src: '/assets/portfolio/projects/icons/docker.svg' },
+  { name: 'AWS', src: '/assets/portfolio/skills/aws.svg' },
+  { name: 'Linux', src: '/assets/portfolio/skills/linux-original.svg' },
+  { name: 'GitHub Actions', src: '/assets/portfolio/skills/github-original.svg' },
+  { name: 'Go', src: '/assets/portfolio/projects/icons/go.svg' },
+  { name: 'Python', src: '/assets/portfolio/skills/python-original.svg' },
+  { name: 'TypeScript', src: '/assets/portfolio/skills/typescript-original.svg' },
+  { name: 'React', src: '/assets/portfolio/skills/react-original.svg' },
+  { name: 'PostgreSQL', src: '/assets/portfolio/skills/postgresql-original.svg' },
+  { name: 'Redis', src: '/assets/portfolio/skills/developer.png' },
+  { name: 'Prometheus', src: '/assets/portfolio/skills/developer.png' },
+  { name: 'Grafana', src: '/assets/portfolio/skills/developer.png' },
+  { name: 'Jaeger', src: '/assets/portfolio/logos/jaeger.svg' },
+];
 
 /**
  *Renders sections with some of my projects
@@ -42,79 +58,20 @@ const HighlightedProjects = (): JSX.Element => {
           />
         </Styled.HeroLeftColumn>
         <Styled.HeroRightColumn>
-          <Styled.GitHubVisualShell>
-            <Styled.RepoBadge className={'main-repo'}>
-              <FiGithub className={'repo-icon'} />
-              <span>AnouarMohamed / KubeLens-AI</span>
-            </Styled.RepoBadge>
-            <Styled.ImageContainer
-              position={{ top: '6%', right: '2%' }}
-              className={'laptop-wrapper'}
-            >
-              <Styled.FloatingImgContainer variant={'laptop'}>
+          <Styled.ToolsGrid>
+            {toolIcons.map((tool) => (
+              <Styled.ToolIconWrapper key={tool.name}>
                 <Image
-                  src={'/assets/portfolio/landing-laptop.png'}
-                  quality={95}
-                  height={800}
-                  width={800}
+                  src={tool.src}
+                  height={50}
+                  width={50}
                   objectFit={'contain'}
-                  alt={'Laptop with code editor'}
-                  priority
-                  className={'laptop'}
+                  alt={tool.name}
                 />
-              </Styled.FloatingImgContainer>
-            </Styled.ImageContainer>
-            <Styled.ImageContainer
-              position={{ top: '34%', right: '1rem' }}
-              className={'mobile-wrapper'}
-            >
-              <Styled.FloatingImgContainer variant={'phone'}>
-                <Image
-                  src={'/assets/portfolio/landing-mobile.png'}
-                  quality={95}
-                  height={450}
-                  width={350}
-                  alt={'Mobile project preview'}
-                  layout={'fixed'}
-                  objectFit={'contain'}
-                  priority
-                  className={'mobile'}
-                />
-              </Styled.FloatingImgContainer>
-            </Styled.ImageContainer>
-            <Styled.ImageContainer
-              position={{ bottom: '5rem', left: '0' }}
-              className={'watch-wrapper'}
-            >
-              <Styled.FloatingImgContainer variant={'watch'}>
-                <Image
-                  src={'/assets/portfolio/landing-watch.png'}
-                  layout={'fixed'}
-                  quality={95}
-                  height={190}
-                  width={190}
-                  objectFit={'contain'}
-                  alt={'Watch deployment preview'}
-                  priority
-                  className={'watch'}
-                />
-              </Styled.FloatingImgContainer>
-            </Styled.ImageContainer>
-            <Styled.RepoMetaRail aria-label={'GitHub project highlights'}>
-              <li>
-                <FiStar className={'repo-icon'} />
-                KubeLens AI
-              </li>
-              <li>
-                <FiGitBranch className={'repo-icon'} />
-                StateSight
-              </li>
-              <li>
-                <FiGithub className={'repo-icon'} />
-                Nodewright
-              </li>
-            </Styled.RepoMetaRail>
-          </Styled.GitHubVisualShell>
+                <span>{tool.name}</span>
+              </Styled.ToolIconWrapper>
+            ))}
+          </Styled.ToolsGrid>
         </Styled.HeroRightColumn>
 
         <ScrollHint />

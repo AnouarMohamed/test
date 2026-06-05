@@ -5,6 +5,7 @@ export const Container = styled.section`
   background-color: #ffffff;
   color: ${({ theme }) => theme.portfolio.resumeColors.darkText};
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-style: initial;
@@ -12,6 +13,36 @@ export const Container = styled.section`
 
   @media ${({ theme }) => theme.media.tablet} {
     padding: 0;
+  }
+`;
+
+export const PDFContainer = styled.div`
+  width: 100%;
+  max-width: 1000px;
+  height: 1200px;
+  margin-bottom: 3rem;
+  border: 1px solid ${({ theme }) => theme.portfolio.resumeColors.accentColor};
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  @media ${({ theme }) => theme.media.tablet} {
+    display: none;
+  }
+`;
+
+export const MobilePDFLink = styled.div`
+  display: none;
+  margin: 2rem 0;
+
+  @media ${({ theme }) => theme.media.tablet} {
+    display: block;
   }
 `;
 

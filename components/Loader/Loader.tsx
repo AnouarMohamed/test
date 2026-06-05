@@ -26,12 +26,12 @@ const Loader = ({ isOnScreen, loadingDuration }: Props): JSX.Element => {
       <Logo isExpanded={isLogoExpanded} />
       <Styled.TextContainer>
         <Styled.ScrollText>
-          JavaScript <br />
-          TypeScript <br />
-          React <br />
-          Next.js <br />
-          Node.js <br />
-          Coffee ☕
+          Kubernetes <br />
+          Cloud-native <br />
+          DevSecOps <br />
+          Diagnostics <br />
+          Infrastructure <br />
+          Automation <br />
         </Styled.ScrollText>
       </Styled.TextContainer>
     </Styled.Container>
